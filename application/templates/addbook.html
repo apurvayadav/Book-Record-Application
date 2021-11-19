@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block title %} Add Book {% endblock title %}
+{% block content %}
+<div class="container">
+  <form class="row g-3" method="POST">
+    <p class="h1">ADD BOOK</p>
+    <div class="col-md-2">
+      <label for="isbn" class="form-label">ISBN-10/ISBN-13</label>
+      <input type="text" class="form-control" id="isbn" name="isbn">
+    </div>
+    <div class="col-md-4">
+      <label for="bookType" class="form-label">Book Type</label>
+      <select id="bookType" class="form-select" name="bookType">
+        <option value="Paperback"> Paperback </option>
+        <option value="Hardcover"> Hardcover </option>
+      </select>
+    </div>
+    <div class="mb-3">
+      <div class="form-group">
+        <label for="specialNotes">Special Notes</label>
+        <textarea class="form-control" id="specialNotes" name="specialNotes" rows="3"></textarea>
+      </div>
+    </div>
+    <div class="col-12">
+      <button type="submit" class="btn btn-primary">Add Book</button>
+    </div>
+  </form>
+</div>
+{% endblock content %}
